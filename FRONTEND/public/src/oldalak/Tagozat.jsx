@@ -11,7 +11,7 @@ const Tagozat = (() => {
     const [listaElemei, setListaElemek] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3333/agazatneve/' + id)
+        axios.get('http://127.0.0.1:3333/agazatneve/' + id)
             .then(res => {
                 console.log(res.data[0])
                 setTagNeve(res.data[0])
