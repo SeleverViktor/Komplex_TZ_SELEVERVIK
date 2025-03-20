@@ -20,7 +20,7 @@ const Tagozat = (() => {
     }, []);
 
     useEffect(() => {
-        axios.get('http://localhost:3333/agazat/' + id)
+        axios.get('http://127.0.0.1:3333/agazat/' + id)
             .then(res => {
                 setListaElemek(res.data)
             })

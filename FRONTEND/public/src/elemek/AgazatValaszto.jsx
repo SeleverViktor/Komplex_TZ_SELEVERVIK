@@ -10,7 +10,7 @@ const Valaszto = (() => {
     let navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:3333/tagozatok')
+        axios.get('http://127.0.0.1:3333/tagozatok')
             .then(res => {
                 setTagozatok(res.data)
             })
@@ -25,7 +25,7 @@ const Valaszto = (() => {
 
     return (
         <>
-            <label>Válassza ki, mely ágazat adatait szeretné látni:</label>
+            <label>Válassza ki, melyik ágazat adatait szeretné látni:</label>
             <select onChange={(e) => kivalasztva(e)} className="form-select">
                 {tagozatok.map(tagozat => (
                     <option value={tagozat.akod}>{tagozat.agazat} {tagozat.nyek?.data[0] === 1 ? "(nyek)" : ""}</option>

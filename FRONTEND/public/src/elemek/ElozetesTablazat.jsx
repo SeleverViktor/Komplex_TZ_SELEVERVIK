@@ -8,7 +8,7 @@ const Elozetes = (() => {
     const [adatok, setAdatok] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3333/elozetes')
+        axios.get('http://127.0.0.1:3333/elozetes')
             .then(res => {
                 setAdatok(res.data)
             })
